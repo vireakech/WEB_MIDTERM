@@ -16,6 +16,12 @@
   --max: 1200px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
@@ -921,7 +927,7 @@ h3 {
   }
 
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr));
     gap: 16px;
   }
 
